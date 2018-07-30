@@ -20,6 +20,9 @@ html, body {
   width: 36px;
 }
 
+md-toolbar{
+  background-color: grey !important;
+}
 md-toolbar h1 {
   margin: auto;
 }
@@ -131,3 +134,8 @@ span.name {
   font-size: 1.1em;
   padding-left: 5px;
 }
+
+.telefones{
+  font-size: 14px;
+}
+.angular-google-map-container { height: 400px; }

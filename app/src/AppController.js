@@ -7,19 +7,21 @@
 function AppController(UsersDataService, $mdSidenav) {
   var self = this;
 
-  self.selected     = null;
-  self.users        = [ ];
-  self.selectUser   = selectUser;
-  self.toggleList   = toggleUsersList;
+  self.selected = null;
+  self.users = [];
+  self.selectUser = selectUser;
+  self.toggleList = toggleUsersList;
 
+
+  self.map = { center: { latitude: 45, longitude: -73 }, zoom: 8 };
   // Load all registered users
 
   UsersDataService
-        .loadAllUsers()
-        .then( function( users ) {
-          self.users    = [].concat(users);
-          self.selected = users[0];
-        });
+    .loadAllUsers()
+    .then(function (users) {
+      self.users = [].concat(users);
+      self.selected = users[0];
+    });
 
   // *********************************
   // Internal methods
@@ -36,9 +38,9 @@ function AppController(UsersDataService, $mdSidenav) {
    * Select the current avatars
    * @param menuId
    */
-  function selectUser ( user ) {
+  function selectUser(user) {
     self.selected = angular.isNumber(user) ? $scope.users[user] : user;
   }
 }
 
-export default [ 'UsersDataService', '$mdSidenav', AppController ];
+export default ['UsersDataService', '$mdSidenav', AppController];

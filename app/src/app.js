@@ -8,7 +8,7 @@ import 'angular-material';
 import AppController from 'src/AppController';
 import Users from 'src/users/Users';
 
-export default angular.module( 'starter-app', [ 'ngMaterial', Users.name ] )
+export default angular.module('starter-app', ['ngMaterial', 'uiGmapgoogle-maps', 'Users.name'])
   .config(($mdIconProvider, $mdThemingProvider) => {
     // Register the user `avatar` icons
     $mdIconProvider
