@@ -1,4 +1,4 @@
-(function() {
+(function () {
     'use strict';
 
     angular
@@ -6,7 +6,7 @@
         .controller('ToolbarController', DefaultToolbarController);
 
     /* @ngInject */
-    function DefaultToolbarController($scope, $injector, $rootScope, $mdMedia, $state, $element, $filter, $mdUtil, $mdSidenav, $mdToast, $timeout, $document, triBreadcrumbsService, triSettings, triLayout) {
+    function DefaultToolbarController($scope, $injector, $rootScope, $mdMedia, $state, $element, $filter, $mdUtil, $mdSidenav, $mdToast, $timeout, $document, triBreadcrumbsService, triSettings, triLayout, $location, $anchorScroll) {
         var vm = this;
         vm.breadcrumbs = triBreadcrumbsService.breadcrumbs;
         vm.emailNew = false;
@@ -19,7 +19,15 @@
         vm.fullScreenIcon = 'zmdi zmdi-fullscreen';
         vm.toggleFullScreen = toggleFullScreen;
 
-        if($injector.has('UserService')) {
+        vm.goTo = function (local) {
+
+            $location.hash(local);
+
+
+            $anchorScroll();
+        }
+
+        if ($injector.has('UserService')) {
             var UserService = $injector.get('UserService');
             vm.currentUser = UserService.getCurrentUser();
         }
@@ -37,29 +45,29 @@
         ////////////////
 
         function openSideNav(navID) {
-            $mdUtil.debounce(function(){
+            $mdUtil.debounce(function () {
                 $mdSidenav(navID).toggle();
             }, 300)();
         }
 
         function switchLanguage(languageCode) {
-            if($injector.has('$translate')) {
+            if ($injector.has('$translate')) {
                 var $translate = $injector.get('$translate');
                 $translate.use(languageCode)
-                .then(function() {
-                    $mdToast.show(
-                        $mdToast.simple()
-                        .content($filter('triTranslate')('Language Changed'))
-                        .position('bottom right')
-                        .hideDelay(500)
-                    );
-                    $rootScope.$emit('changeTitle');
-                });
+                    .then(function () {
+                        $mdToast.show(
+                            $mdToast.simple()
+                                .content($filter('triTranslate')('Language Changed'))
+                                .position('bottom right')
+                                .hideDelay(500)
+                        );
+                        $rootScope.$emit('changeTitle');
+                    });
             }
         }
 
         function hideMenuButton() {
-            switch(triLayout.layout.sideMenuSize) {
+            switch (triLayout.layout.sideMenuSize) {
                 case 'hidden':
                     // always show button if menu is hidden
                     return false;
@@ -79,10 +87,10 @@
 
         function toggleFullScreen() {
             vm.isFullScreen = !vm.isFullScreen;
-            vm.fullScreenIcon = vm.isFullScreen ? 'zmdi zmdi-fullscreen-exit':'zmdi zmdi-fullscreen';
+            vm.fullScreenIcon = vm.isFullScreen ? 'zmdi zmdi-fullscreen-exit' : 'zmdi zmdi-fullscreen';
             // more info here: https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API
             var doc = $document[0];
-            if (!doc.fullscreenElement && !doc.mozFullScreenElement && !doc.webkitFullscreenElement && !doc.msFullscreenElement ) {
+            if (!doc.fullscreenElement && !doc.mozFullScreenElement && !doc.webkitFullscreenElement && !doc.msFullscreenElement) {
                 if (doc.documentElement.requestFullscreen) {
                     doc.documentElement.requestFullscreen();
                 } else if (doc.documentElement.msRequestFullscreen) {
@@ -105,7 +113,7 @@
             }
         }
 
-        $scope.$on('newMailNotification', function(){
+        $scope.$on('newMailNotification', function () {
             vm.emailNew = true;
         });
     }
