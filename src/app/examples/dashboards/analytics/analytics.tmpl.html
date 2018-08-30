@@ -44,20 +44,21 @@
 
 <md-card class="md-padding">
     <h2>
-        <a id="localizacao">Localização</a>
+        <a id="localizacao">Localização2</a>
     </h2>
     <md-divider></md-divider>
 
+
+
     <md-card-content class="md-padding">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec semper neque quis nisi ultrices imperdiet. Sed tortor libero,
-        feugiat vitae semper ut, pellentesque ut ex. Aenean a maximus metus, eu lobortis turpis. Integer faucibus a ipsum
-        sed finibus. Donec dictum mauris sit amet nisi sollicitudin vestibulum. Integer ac elit magna. Mauris ornare cursus
-        eros eu sollicitudin. Morbi mattis libero quis consectetur varius. Quisque hendrerit dapibus erat a bibendum. Vestibulum
-        sit amet euismod ex. Aliquam erat volutpat. Curabitur ut est enim. Quisque laoreet risus non euismod interdum. Vestibulum
-        velit odio, tempor sit amet tempus eget, tempus et libero. Curabitur vel porta erat. Quisque sed diam nunc. Vestibulum
-        elementum sem eu justo ultrices, vel elementum neque vestibulum. Nullam eget purus a enim tincidunt euismod sit amet
-        eget purus. Vestibulum sed mollis leo. Etiam rutrum elit sed eros scelerisque iaculis. Maecenas lacinia tempus tellus,
-        a consectetur diam consequat vitae.
+
+        <ui-gmap-google-map center="vm.labeledMap.center" zoom="vm.labeledMap.zoom" options="vm.labeledMap.options">
+            <ui-gmap-marker coords="vm.labeledMap.marker.coords" idkey="vm.labeledMap.marker.id" options="vm.labeledMap.marker.options">
+                <ui-gmap-window show="'true'">
+                    <div>{{vm.labelTitle}}</div>
+                </ui-gmap-window>
+            </ui-gmap-marker>
+        </ui-gmap-google-map>
 
 
     </md-card-content>

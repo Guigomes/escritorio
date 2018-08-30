@@ -1,8 +1,5 @@
 (function() {
-    'use strict';
+  "use strict";
 
-    angular
-        .module('app.examples.dashboards', [
-
-        ]);
+  angular.module("app.examples.dashboards", ["uiGmapgoogle-maps"]);
 })();

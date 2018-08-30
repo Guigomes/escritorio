@@ -1,13 +1,16 @@
 .triangular-toolbar {
-    &.ng-enter {
-        transition: .5s;
-    }
+  &.ng-enter {
+    transition: 0.5s;
+  }
 
-    &.ng-enter {
-      @include slideInDown();
-    }
+  &.ng-enter {
+    @include slideInDown();
+  }
 
-    &.ng-leave {
-      display: none;
-    }
+  &.ng-leave {
+    display: none;
+  }
+}
+.white {
+  color: white !important;
 }

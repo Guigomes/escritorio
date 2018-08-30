@@ -1,13 +1,11 @@
-<div class="md-toolbar-tools">
+<div class="md-toolbar-tools" style="margin-top: 20px;">
     <md-button class="md-icon-button" ng-if="!vm.hideMenuButton()" ng-click="vm.openSideNav('left')" aria-label="side navigation">
         <md-icon md-font-icon="zmdi zmdi-menu"></md-icon>
     </md-button>
 
-    <h2 hide-xs flex>
-        <span>
-            Escritório Contábil Aquarius
-        </span>
-    </h2>
+    <div class="row">
+        <img src="../../../assets/images/header.png" />
+    </div>
 
 
 
@@ -15,32 +13,32 @@
 
 </div>
 
-<div class="md-toolbar-tools">
+<div class="md-toolbar-tools" style="color: white; background-color:steelblue; margin-top: 20px;">
 
 
     <md-button class="toolbar-button" ng-click="vm.goTo('escritorio')">
-        <md-icon md-font-icon="fa fa-building"></md-icon>
+        <md-icon md-font-icon="fa fa-building" class="white"></md-icon>
 
         <span>O Escritório</span>
     </md-button>
     <md-button class="toolbar-button" ng-click="vm.goTo('contato')">
-        <md-icon md-font-icon="fa fa-phone"></md-icon>
+        <md-icon md-font-icon="fa fa-phone" class="white"></md-icon>
 
         <span>Contato</span>
     </md-button>
     <md-button class="toolbar-button" ng-click="vm.goTo('localizacao')">
-        <md-icon md-font-icon="fa fa-map"></md-icon>
+        <md-icon md-font-icon="fa fa-map" class="white"></md-icon>
 
         <span>Localização</span>
     </md-button>
     <md-button class="toolbar-button" ng-click="vm.goTo('noticias')">
 
-        <md-icon md-font-icon="fa fa-book"></md-icon>
+        <md-icon md-font-icon="fa fa-book" class="white"></md-icon>
 
         <span>Notícias</span>
     </md-button>
     <md-button class="toolbar-button" ng-click="vm.goTo('premios')">
-        <md-icon md-font-icon="fa fa-trophy"></md-icon>
+        <md-icon md-font-icon="fa fa-trophy" class="white"></md-icon>
 
         <span>Premios</span>
     </md-button>
