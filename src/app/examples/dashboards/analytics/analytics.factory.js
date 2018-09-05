@@ -79,12 +79,12 @@
       }
     ];
 
-    var textoQuemsomos =
+    var textoQuemSomos =
       "Criada em 1993 com o intuito de auxiliar os empresários a gerir suas empresas de maneira mais eficaz e econômica, a STAFF hoje com mais de 25 anos no mercado, conta com uma profunda experiência nos mais diversos ramos do setor empresarial. Com uma equipe capacitada e experiente, prestamos serviços nas áreas contábil, fiscal, departamento pessoal, consultoria, assessoria tributária, dentre outros, proporcionando aos clientes um suporte completo, que abrange não só as necessidades do dia a dia, mas também todas aquelas necessárias para tomadas de decisões emergentes. Em constante atualização com a legislação e as tendências do mercado, nossos profissionais prestam toda assessoria necessária para que sua empresa otimize os custos visando uma maior lucratividade.";
     var service = {
       getData: getData,
-      servicos: servicosContabeis,
-      textoQuemsomos: textoQuemsomos
+      servicosContabeis: servicosContabeis,
+      textoQuemSomos: textoQuemSomos
     };
 
     return service;

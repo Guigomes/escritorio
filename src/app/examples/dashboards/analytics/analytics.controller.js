@@ -17,7 +17,8 @@
     uiGmapGoogleMapApi
   ) {
     var vm = this;
-
+    vm.textoQuemSomos = AnalyticsService.textoQuemSomos;
+    vm.servicosContabeis = AnalyticsService.servicosContabeis;
     uiGmapGoogleMapApi.then(function(maps) {
       vm.labeledMap = {
         center: {
