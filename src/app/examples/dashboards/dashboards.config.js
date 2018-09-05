@@ -30,7 +30,7 @@
             templateUrl: 'app/examples/dashboards/general/dashboard-general.tmpl.html'
         })
         .state('triangular.dashboard-analytics', {
-            url: '/dashboards/analytics',
+            url: '/',
             views: {
                 '': {
                     templateUrl: 'app/examples/dashboards/analytics/analytics.tmpl.html',
