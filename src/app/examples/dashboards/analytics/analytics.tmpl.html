@@ -1,6 +1,6 @@
-<md-card class="md-padding" style="margin-top: 50px;">   
+<md-card class="md-padding" style="margin-top: 50px;" id="escritorio">   
     <h2>
-        <a id="escritorio">O Escritório</a>
+        <a >O Escritório</a>
     </h2>
     <md-divider></md-divider>
 
@@ -11,9 +11,9 @@
 
 </md-card>
 
-<md-card class="md-padding">
+<md-card class="md-padding"  id="contato">
     <h2>
-        <a id="contato">Contato</a>
+        <a>Contato</a>
     </h2>
     <md-divider></md-divider>
 
@@ -33,9 +33,9 @@
 
 </md-card>
 
-<md-card class="md-padding">
+<md-card class="md-padding" id="localizacao">
     <h2>
-        <a id="localizacao">Localização</a>
+        <a >Localização</a>
     </h2>
     <md-divider></md-divider>
 
@@ -51,9 +51,9 @@
 
 </md-card>
 
-<md-card class="md-padding">
+<md-card class="md-padding"  id="noticias">
     <h2>
-        <a id="noticias">Notícias</a>
+        <a>Notícias</a>
     </h2>
     <md-divider></md-divider>
 
@@ -73,20 +73,21 @@
 
 </md-card>
 
-<md-card class="md-padding">
+<md-card class="md-padding" id="premios" >
     <h2>
-        <a id="premios">Serviços Contábeis</a>
+        <a >Serviços Contábeis</a>
     </h2>
     <md-divider></md-divider>
 
     <md-card-content class="md-padding">
 
-        <div ng-repeat="servico in vm.servicosContabeis">
+        <md-card ng-repeat="servico in vm.servicosContabeis" style="float: left; position: relative; max-width: 300px;">
             <h3>{{servico.categoria}}</h3>
-
+            <md-divider></md-divider>
+        <md-card-content>            
             <li ng-repeat="serv in servico.servicos">{{serv}}</li>
-        </div>
-
+        </md-card-content>
+</md-card>
 
     </md-card-content>
 
