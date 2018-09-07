@@ -6,29 +6,34 @@
 
     <div layout="row" layout-align="space-around center" flex="100">
 
-    <div  layout="column">
-        <img src="../../../assets/images/header.png" />
-      </div>
-      <div layout="row"  layout-align="space-around"  flex="100">
+        <div layout="column">
+            <img src="../../../assets/images/header.png" />
+        </div>
+        <div layout="row" layout-align="space-around" flex="100">
 
-        <div layout="column" class="divContato" layout-align="center center">
-            <span><md-icon md-font-icon="fa fa-phone"></md-icon>(67) 3324-7775</span>
-            <span><md-icon md-font-icon="fa fa-phone"></md-icon>(67) 3382-1530</span>
-      </div>
-      <div layout="column" class="divContato" layout-align="center start">
-            <span><md-icon md-font-icon="fa fa-whatsapp" style="color: green"></md-icon>(67) 9902-7770</span>
-      </div>
+            <div layout="column" class="divContato" layout-align="center center">
+                <span>
+                    <md-icon md-font-icon="fa fa-phone"></md-icon>(67) 3324-7775</span>
+                <span>
+                    <md-icon md-font-icon="fa fa-phone"></md-icon>(67) 3382-1530</span>
+            </div>
+            <div layout="column" class="divContato" layout-align="center start">
+                <span>
+                    <md-icon md-font-icon="fa fa-whatsapp" style="color: green"></md-icon>(67) 99902-7770</span>
+                <span>
+                    <md-icon md-font-icon="fa fa-envelope-square"></md-icon>aquariusmsi@terra.com.br
+                </span>
+            </div>
 
-      <div layout="column" class="divContato" layout-align="center start">
-            <span><md-icon md-font-icon="fa fa-envelope-square"></md-icon>aquariusmsi@terra.com.br</span>
-            
-      </div>
-      <div layout="column" class="divContato" layout-align="center start" flex="30" style="text-align: center;">
-            <span><md-icon md-font-icon="fa fa-clock-o"></md-icon>Horário de funcionamento: Segunda à sexta da 08:00h  às 17:30h</span>
-         </div>
-      
-   </div>
-   
+            <div layout="column" class="divContato" layout-align="center start" flex="30">
+
+                <span>Funcionamento</span>
+                <span>Segunda à Sexta</span>
+                <span>08:00h-12:00 / 13:00-17:30h</span>
+            </div>
+
+        </div>
+
     </div>
 
 
@@ -46,10 +51,14 @@
 
         <span>O Escritório</span>
     </md-button>
+    <md-button class="toolbar-button" ng-click="vm.goTo('premios')">
+        <md-icon md-font-icon="fa fa-book" class="white"></md-icon>
+        <span>Serviços Contábeis</span>
+    </md-button>
     <md-button class="toolbar-button" ng-click="vm.goTo('contato')">
         <md-icon md-font-icon="fa fa-phone" class="white"></md-icon>
 
-        <span>Contato</span>
+        <span>Fale conosco</span>
     </md-button>
     <md-button class="toolbar-button" ng-click="vm.goTo('localizacao')">
         <md-icon md-font-icon="fa fa-map" class="white"></md-icon>
@@ -58,15 +67,11 @@
     </md-button>
     <md-button class="toolbar-button" ng-click="vm.goTo('noticias')">
 
-        <md-icon md-font-icon="fa fa-book" class="white"></md-icon>
+        <md-icon md-font-icon="fa fa-font" class="white"></md-icon>
 
         <span>Notícias</span>
     </md-button>
-    <md-button class="toolbar-button" ng-click="vm.goTo('premios')">
-        <md-icon md-font-icon="fa fa-trophy" class="white"></md-icon>
 
-        <span>Serviços Contábeis</span>
-    </md-button>
 
 
 

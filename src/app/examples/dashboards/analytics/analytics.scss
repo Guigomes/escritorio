@@ -1,11 +1,16 @@
 .analytics-dashboard {
-  background: #F4F4F4;
+  background: #f4f4f4;
 
   .map-widget .angular-google-map-container {
-  	height: 400px;
+    height: 400px;
   }
 
   .no-padding-card md-card-content {
     padding: 0px;
   }
+}
+
+.content-endereco {
+  font-size: 12px;
+  font-weight: bold;
 }
